@@ -9,10 +9,12 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
+import { useState } from "react";
 import "./Button.css";
 var Button = function (props) {
-    return _jsx("button", __assign({ className: "custom-button" }, { children: props.label }));
+    var _a = useState(0), counter = _a[0], setCounter = _a[1];
+    return (_jsxs("button", __assign({ className: "custom-button", onClick: function () { return setCounter(function (counter) { return counter + 1; }); } }, { children: [props.label, ": ", counter] })));
 };
 export default Button;
 //# sourceMappingURL=Button.js.map

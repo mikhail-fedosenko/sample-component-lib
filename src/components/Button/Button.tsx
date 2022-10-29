@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Button.css";
 
 export interface ButtonProps {
@@ -6,7 +6,16 @@ export interface ButtonProps {
 }
 
 const Button = (props: ButtonProps) => {
-  return <button className="custom-button">{props.label}</button>;
+  const [counter, setCounter] = useState(0);
+
+  return (
+    <button
+      className="custom-button"
+      onClick={() => setCounter((counter) => counter + 1)}
+    >
+      {props.label}: {counter}
+    </button>
+  );
 };
 
 export default Button;
