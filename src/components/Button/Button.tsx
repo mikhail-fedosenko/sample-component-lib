@@ -13,7 +13,7 @@ const Button = (props: ButtonProps) => {
       className="custom-button"
       onClick={() => setCounter((counter) => counter + 1)}
     >
-      {props.label}: {counter}
+      {props.label}. counter: {counter}
     </button>
   );
 };

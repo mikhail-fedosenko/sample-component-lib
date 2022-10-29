@@ -14,7 +14,7 @@ import { useState } from "react";
 import "./Button.css";
 var Button = function (props) {
     var _a = useState(0), counter = _a[0], setCounter = _a[1];
-    return (_jsxs("button", __assign({ className: "custom-button", onClick: function () { return setCounter(function (counter) { return counter + 1; }); } }, { children: [props.label, ": ", counter] })));
+    return (_jsxs("button", __assign({ className: "custom-button", onClick: function () { return setCounter(function (counter) { return counter + 1; }); } }, { children: [props.label, ". counter: ", counter] })));
 };
 export default Button;
 //# sourceMappingURL=Button.js.map
